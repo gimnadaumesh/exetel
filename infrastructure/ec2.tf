@@ -2,7 +2,7 @@
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
-  name = "exetel assignment"
+  name = "exetel_assignment"
 
   instance_type          = "t2.micro"
   key_name               = "exetel"
