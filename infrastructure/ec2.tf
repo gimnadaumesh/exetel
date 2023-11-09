@@ -6,6 +6,7 @@ module "ec2_instance" {
 
   instance_type          = "t2.micro"
   key_name               = "exetel"
+  ami                    = "ami-0fc5d935ebf8bc3bc"
   monitoring             = true
   vpc_security_group_ids = aws_security_group.allow_80.id
   subnet_id              = aws_subnet.main.id
@@ -16,6 +17,6 @@ module "ec2_instance" {
   }
   
   depends_on = [
-    aws_subnet.main
+    aws_subnet.main , aws_security_group.allow_80
   ]
 }
