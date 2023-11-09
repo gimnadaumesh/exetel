@@ -6,7 +6,7 @@ module "ec2_instance" {
 
   instance_type          = "t2.micro"
   key_name               = "exetel"
-  ami                    = "ami-0fc5d935ebf8bc3bc"
+  ami                    = "ami-0df4b2961410d4cff"
   monitoring             = true
   vpc_security_group_ids = [aws_security_group.allow_80.id]
   subnet_id              = aws_subnet.main.id
