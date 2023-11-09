@@ -5,5 +5,8 @@ resource "aws_subnet" "main" {
   tags = {
     Name = "exetel-Public"
   }
+  depends_on = [
+    aws_vpc.main
+  ]
 }
 

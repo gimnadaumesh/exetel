@@ -14,4 +14,10 @@ module "ec2_instance" {
     Terraform   = "true"
     Environment = "dev"
   }
+  depends_on = [
+    aws_vpc.main
+  ]
+  depends_on = [
+    aws_subnet.main
+  ]
 }
