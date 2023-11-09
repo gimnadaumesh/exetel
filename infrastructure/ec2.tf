@@ -8,7 +8,7 @@ module "ec2_instance" {
   key_name               = "exetel"
   ami                    = "ami-0fc5d935ebf8bc3bc"
   monitoring             = true
-  vpc_security_group_ids = aws_security_group.allow_80.id
+  vpc_security_group_ids = [aws_security_group.allow_80.id]
   subnet_id              = aws_subnet.main.id
 
   tags = {
