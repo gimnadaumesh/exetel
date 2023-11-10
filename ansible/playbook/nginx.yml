@@ -1,9 +1,9 @@
 ---
-- name: Deply Nginx
+- name: Bootstrap
   hosts: all
   gather_facts: yes
   become: yes
   become_method: sudo
   remote_user: ubuntu
   roles:
-    -role: nginx
+    - role: nginx
