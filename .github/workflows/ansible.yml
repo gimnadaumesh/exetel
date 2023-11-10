@@ -18,18 +18,10 @@ jobs:
     - name: Checkout 
       uses: actions/checkout@v3
 
-    - name: perimission cange on ec2.py 
-      run: |
-        chmod 775 ansible/inventory/ec2.py
-        ansible --version
-        pip install boto
-        pip install ansible
-        pip install ec2
-
-    - name: Run ansible script
-      shell: bash 
-      run: |
-        service ssh status
-        cd ansible/playbook
-        cat nginx.yml
-        ansible-playbook  -i ../inventory/ec2.yml nginx.yml
+    - name: Run Ansible playbook
+      uses: dawidd6/action-ansible-playbook@v2.5.0
+      with:
+        playbook: ansible/playbook/nginx.yml 
+        directory: ./
+        key: ${{ secrets.SSH_PRIVATE_KEY }} 
+        inventory: ${{ secrets.ansible_inventory }} 
