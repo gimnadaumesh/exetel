@@ -5,5 +5,11 @@
   become: yes
   become_method: sudo
   remote_user: ubuntu
-  roles:
-    - role: nginx
+  tasks:
+    -name: Install Nginx
+     apt: name=nginx state=latest
+
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
