@@ -1,4 +1,4 @@
-name: Provision AWS lambda And API gateway
+name: Provision Aws EC2
 on:
   push:
     paths:
