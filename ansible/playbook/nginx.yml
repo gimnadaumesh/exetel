@@ -1,15 +1,9 @@
 ---
-- name: Deploy Nginx
+- name: Deply Nginx
   hosts: all
   gather_facts: yes
   become: yes
   become_method: sudo
   remote_user: ubuntu
-  tasks:
-    -name: Install Nginx
-     apt: name=nginx state=latest
-
-    - name: start nginx
-      service:
-          name: nginx
-          state: started
+  roles:
+-   -role: nginx
