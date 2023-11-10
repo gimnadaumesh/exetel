@@ -20,7 +20,7 @@ jobs:
 
     - name: perimission cange on ec2.py 
       run: |
-        chmod -x ansible/inventory/ec2.py
+        chmod 775 ansible/inventory/ec2.py
 
     - name: Run ansible script
       shell: bash 
