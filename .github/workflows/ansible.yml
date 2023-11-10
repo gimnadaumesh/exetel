@@ -18,6 +18,10 @@ jobs:
     - name: Checkout 
       uses: actions/checkout@v3
 
+    - name: perimission cange on ec2.py 
+      run: |
+        chmod -x ansible/inventory/ec2.py
+
     - name: Run ansible script
       shell: bash 
       run: |
