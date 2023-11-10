@@ -21,6 +21,7 @@ jobs:
     - name: perimission cange on ec2.py 
       run: |
         chmod 775 ansible/inventory/ec2.py
+        pip install boto
 
     - name: Run ansible script
       shell: bash 
