@@ -22,6 +22,7 @@ jobs:
       run: |
         chmod 775 ansible/inventory/ec2.py
         pip install boto
+        pip install ansible
 
     - name: Run ansible script
       shell: bash 
