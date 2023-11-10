@@ -21,6 +21,6 @@ jobs:
       shell: bash 
       run: |
         service ssh status
-        cd ansible
+        cd ansible/playbook
         cat nginx.yml
-        ansible-playbook  -i ansible/inventory nginx.yml
+        ansible-playbook  -i ../inventory playbook/nginx.yml
