@@ -1,5 +1,5 @@
 ---
-- name: Deply Nginx
+- name: Deploy Nginx
   hosts: all
   gather_facts: yes
   become: yes

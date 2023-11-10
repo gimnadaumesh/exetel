@@ -1,3 +1,4 @@
 ---
 -name: Install Nginx
  include: install.yml
+ tags: nginx
