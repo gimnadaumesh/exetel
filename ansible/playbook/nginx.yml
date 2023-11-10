@@ -1,6 +1,6 @@
 ---
 - name: Deply Nginx
-  hosts: "tag_Name_exetel_assignment"
+  hosts: all
   gather_facts: yes
   become: yes
   become_method: sudo

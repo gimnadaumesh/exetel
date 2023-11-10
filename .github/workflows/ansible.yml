@@ -32,4 +32,4 @@ jobs:
         service ssh status
         cd ansible/playbook
         cat nginx.yml
-        ansible-playbook  -i ../inventory/ec2.py nginx.yml
+        ansible-playbook  -i ../inventory/ec2.yml nginx.yml
