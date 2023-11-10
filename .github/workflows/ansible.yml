@@ -17,9 +17,10 @@ jobs:
     - name: Checkout 
       uses: actions/checkout@v3
 
-    - name: Run Ansible playbook
-      uses: dawidd6/action-ansible-playbook@v2.5.0
-      with:
-        playbook: ./ansible/playbook/nginx.yml 
-        directory: ./
-        inventory: ./ansible/inventory
+    - name: Run ansible script
+      shell: bash 
+      run: |
+        service ssh status
+        cd ansible
+        cat nginx.yml
+        ansible-playbook  -i ansible/inventory nginx.yml
