@@ -1,6 +1,5 @@
 # exetel
-# kodez
-Assignment For Kodez
+
 
 ## Requirement
 * Create a t2.micro EC2 instance called test-ec2 in ap-southeast-2
