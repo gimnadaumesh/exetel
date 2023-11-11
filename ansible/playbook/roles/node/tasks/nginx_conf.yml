@@ -1,0 +1,14 @@
+---
+- name: Copy application
+  template:
+    src: node.j2
+    dest: /etc/nginx/sites-available/node-application
+
+- name: Symlink foe congig
+  shell: |
+    ln -s /etc/nginx/sites-available/node-application /etc/nginx/sites-enabled
+
+- name: Restart nginx
+  service:
+      name: nginx
+      state: restarted

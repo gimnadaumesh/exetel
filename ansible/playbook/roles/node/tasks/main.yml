@@ -4,3 +4,6 @@
 
 - name: App Configuration
   include: application.yml
+
+- name: Nginx Configuration
+  include: nginx_conf.yml
