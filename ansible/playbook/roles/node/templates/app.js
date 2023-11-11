@@ -2,6 +2,11 @@ const express = require('express');
 const AWS = require('aws-sdk');
 const app = express();
 
+AWS.config = new AWS.Config();
+AWS.config.accessKeyId = secrets.AWS_ACCESS_KEY_ID;
+AWS.config.secretAccessKey = secrets.AWS_SECRET_ACCESS_KEY;
+AWS.config.region = "ap-southeast-2";
+
 const metadata = new AWS.MetadataService();
 
 app.get('/', async (req, res) => {
