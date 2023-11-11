@@ -26,5 +26,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }} 
         inventory: ${{ secrets.ansible_inventory }}
         options: |
-          --extra-vars ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY_ID }}  SECRET_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          --extra-var ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY_ID }}  SECRET_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
          
