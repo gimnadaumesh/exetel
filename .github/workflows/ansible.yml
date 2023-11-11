@@ -24,4 +24,7 @@ jobs:
         playbook: ansible/playbook/nginx.yml 
         directory: ./
         key: ${{ secrets.SSH_PRIVATE_KEY }} 
-        inventory: ${{ secrets.ansible_inventory }} 
+        inventory: ${{ secrets.ansible_inventory }}
+        env:
+          - ACCESS_KEY: '${{ secrets.AWS_ACCESS_KEY_ID }}'
+          - SECRET_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}' 
