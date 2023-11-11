@@ -1,0 +1,6 @@
+---
+- name: Install Node
+  include: install.yml
+
+- name: App Configuration
+  include: application.yml
