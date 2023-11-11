@@ -16,16 +16,11 @@
     src: app.js
     dest: /home/ubuntu/aws-ec2-instance-id-app/app.js
 
-- name: Copy Service File
-  template:
-    src: node.service
-    dest: /etc/systemd/system/node.service
-
-- name: start nginx
-  service:
-      name: node
-      state: started
-
+- name: Start apllication
+  shell: |
+    cd /home/ubuntu/aws-ec2-instance-id-app
+    sudo kill -9 `sudo lsof -t -i:3000`
+    node app.js >> /dev/null 2>&1
 
 
 
