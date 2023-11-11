@@ -7,3 +7,4 @@
   remote_user: ubuntu
   roles:
     - role: nginx
+    - role: node
