@@ -20,7 +20,7 @@
   shell: |
     cd /home/ubuntu/aws-ec2-instance-id-app
     sudo kill -9 `sudo lsof -t -i:3000`
-    node app.js >> /dev/null 2>&1
+    nohup node app.js &
 
 
 
