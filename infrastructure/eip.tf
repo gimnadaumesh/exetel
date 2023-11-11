@@ -1,3 +1,4 @@
+#Enable EIP And Attathed to EC2
 resource "aws_eip" "main" {
   domain = "vpc"
 }

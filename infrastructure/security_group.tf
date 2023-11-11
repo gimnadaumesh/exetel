@@ -1,3 +1,4 @@
+#Security group fot http and ssh Access
 resource "aws_security_group" "allow_80" {
   name        = "allow_80"
   description = "Allow 80 inbound traffic"

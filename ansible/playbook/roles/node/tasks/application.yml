@@ -1,10 +1,10 @@
 ---
-- name: Creates directory
+- name: Creates directory For Apllication
   file:
     path: /home/ubuntu/aws-ec2-instance-id-app
     state: directory
 
-- name: Install npm 
+- name: Install npm Dependencies
   shell: |
     cd /home/ubuntu/aws-ec2-instance-id-app
     npm install aws-sdk

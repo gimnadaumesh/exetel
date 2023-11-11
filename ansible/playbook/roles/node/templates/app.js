@@ -19,7 +19,7 @@ app.get('/', async (req, res) => {
             res.status(500).send('Internal Server Error');
         } else {
             console.log("Success", JSON.stringify(data));
-            res.send(`########### .......... AWS EC2 Instance ID: ${JSON.stringify(data.Reservations[0].Instances[0].InstanceId)}.......... ########### ..........   AWS EC2 Public IP: ${JSON.stringify(data.Reservations[0].Instances[0].PrivateIpAddress)}..........###########`);
+            res.send(`########### .......... AWS EC2 Instance ID: ${JSON.stringify(data.Reservations[0].Instances[0].InstanceId)}.......... ########### ..........   AWS EC2 Private IP: ${JSON.stringify(data.Reservations[0].Instances[0].PrivateIpAddress)}..........###########`);
         }
 });
 });

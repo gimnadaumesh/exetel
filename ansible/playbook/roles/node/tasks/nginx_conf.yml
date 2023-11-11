@@ -1,10 +1,10 @@
 ---
-- name: Delete Exixting Configurations 
+- name: Delete Existing Configurations On Nginx
   ansible.builtin.file:
     state: absent
     path: /etc/nginx/sites-available/default
 
-- name: Copy application
+- name: Copy New Configuarations
   template:
     src: node.j2
     dest: /etc/nginx/sites-available/default

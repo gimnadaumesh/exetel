@@ -2,7 +2,12 @@
 - name: Install Nginx
   apt: name=nginx state=latest
 
-- name: start nginx
+- name: Start nginx service
   service:
       name: nginx
       state: started
+
+- name: Enable nginx service
+  service:
+      name: nginx
+      state: enabled
