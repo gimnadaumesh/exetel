@@ -24,6 +24,7 @@
 - name: Start apllication
   shell: |
     cd /home/ubuntu/aws-ec2-instance-id-app
+    killall node
     node app.js
 
 
