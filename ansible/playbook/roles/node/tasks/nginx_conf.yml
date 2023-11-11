@@ -1,12 +1,13 @@
 ---
+- name: Delete Exixting Configurations 
+  ansible.builtin.file:
+    state: absent
+    path: /etc/nginx/sites-available/default
+
 - name: Copy application
   template:
     src: node.j2
-    dest: /etc/nginx/sites-available/node-application
-
-- name: Symlink foe congig
-  shell: |
-    ln -s /etc/nginx/sites-available/node-application /etc/nginx/sites-enabled
+    dest: /etc/nginx/sites-available/default
 
 - name: Restart nginx
   service:
